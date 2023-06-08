@@ -1,0 +1,387 @@
+<!-- members -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../espace1/Blida1.png" type="image/x-icon">
+    <title>Member</title>
+    <link rel="stylesheet" href="../home-page/style.css">
+    <link rel="stylesheet" href="members.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+       <img src="1680966344837.jpg" alt="">
+       <ul>
+                 <li><a href="../home-page/index.php">Accuil</a></li>
+                 <li><a href="../formation/formation.php">Formation</a></li>
+                 <li><a href="../presentation/presentation.php">presentation</a></li>
+                 
+                 <li class="soso"><a >Recherche</a>
+                     <ul class="sous-menu">
+                 <li><a href="../equipe/equipe.php" >Equipes</a></li>
+                 <li><a href="../project1/pub.php" >Projets</a></li>          
+                 <li><a href="../article1/pub1.php" >Publications</a></li>  
+                 <li><a href="../membres/members.php">Membres</a></li>
+                   </ul>
+                 </li>
+                 <li><a href="../contact/contact1.php" target="_blank">Contact </a></li>
+             </ul>
+            
+       
+
+    </header>
+    <div class="zwa9">
+   
+        <div class="p1">
+            <p>home/Member/</p>
+             <h2 style="color :white; font-size:40px; margin-left:30px;">Member</h2>
+          <p>Bienvenue, commençons</p>
+       </div>
+        <div class="p2"><img src="qq.jpg" alt=""></div>
+    </div>
+    <div class="tout">
+    <form action="/mem" method="post">
+    <div class="select-box" style="gap: 10px">
+        <label for="nub">Members</label>
+        <input type="search" name="search" id="x7" placeholder="search ...">
+        <!-- <button type="submit">Search</button> -->
+    </div>
+</form>
+
+  <!--- hadi li tstokiha f bas de doni //////////////////////machi doctor non////////////////////////////////////////////////////////////////////////////// -->
+  <div class="per">
+    <div class="page-goch">
+       <h2>Member</h2>
+       
+   
+       <% members.forEach((user) => { %>
+        <% if (user.type2 !== 'doctora') { %>
+         <details>
+           <summary>
+             <div class="inter">
+               <img src="../home-page/img3.jpg" alt="">
+               <h3><%= user.nom %></h3>
+             </div>
+           </summary>
+   
+           <div class="sous-mem">
+             <h2><%= user.prenom %></h2>
+             <ul>
+               <li>Type: <%= user.type2 %></li>
+               <li>name <%= user.nom %></li>
+               <li>prenom <%= user.prenom %></li>
+             </ul>
+           </div>
+         </details>
+         <% } %>
+       <% }) %>
+      
+     
+  
+   
+<!-- hna t5lAS////////////////////////////////////////////////////////// doctor yes-->
+
+</div>
+<div class="page-droit">
+    <h2>Doctorants</h2>
+    <% members.forEach((user) => { %>
+      <% if (user.type2 == 'doctora') { %>
+ 
+            <details>
+                <summary>
+                    <div class="inter">
+                        <img src="../home-page/img3.jpg" alt="">
+                        <h3><%= user.nom %></h3>
+                    </div>
+                </summary>
+
+                <div class="sous-mem">
+                    <h2>gh</h2>
+                    <ul>
+                        <li>Type: <%= user.type2 %> </li>
+                        <li>nom : <%= user.nom %></li>
+                        <li>prenom: <%= user.prenom %></li>
+                    </ul>
+                </div>
+            </details>
+            <% } %>
+<% })%>
+                     
+    
+
+    <!-- hna t5lAS////////////////////////////////////////////////////////// -->
+</div>
+
+</div>
+</div>
+ 
+<!-- <div class="page-final reveal">
+        <h3>LABORATOIRE DE RECHERCHE POUR LE DEVELOPPEMENT <br> DES SYSTEMES INFORMATISES</h3>
+        <h4>Université Saad Dahlab - Blida 1  |  Faculté des Sciences  </h4>
+        <h4>http://www.univ-blida.dz </h4>
+
+
+        <ul class="hh">
+        <li><a href="../home-page/index.php">accueil</a></li>
+            <li><a href="../presentation/presentation.php">présentation</a></li>
+            <li><a href="../equipe/equip.php">equipes</a></li>
+            <li><a href="../formation/formation.php">formation</a></li>
+            <li ><a  href="../contact/contact1.php">contact</a></li>
+        </ul>
+        <ul class="hh">
+        <li><a href="../project1/pub.php">projects</a></li>
+            <li><a href="../article1/pub1.php">publication</a></li>
+            <li><a href="../membres/members.php">membres</a></li>
+            
+        </ul>
+        <a href="../mention/mention.php"> Copyright ©2020 All rights reserved to LRDSI</a>
+        
+    </div> -->
+<!-- pour footer -->
+    <style>
+        .page-final {
+    width: 100%;
+    height: 300px;
+    background-color:#213555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #F9E0BB;
+}
+.page-final a{
+    text-decoration: none;
+    color:#F9E0BB;
+
+}
+.page-final h3{
+    font-size: 20px;
+    text-align: center;
+}
+.page-final ul{
+    display: flex;
+    gap: 10px;
+
+}
+.page-final li{
+    padding: 7px;
+    border: white 2px solid;
+    border-radius: 20px;
+}
+.hh li{
+    list-style: none;
+}
+    </style>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+       
+        }
+        
+        header{
+            min-height: 140px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,28%) ;
+        padding: 10px;
+        
+        }
+        header img{
+            height: 100px;
+        }
+        header  ul{
+            padding: 10px 30px;
+            /* width: 60%; */
+    
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+         
+    
+            
+        }
+        header > ul> li {
+            margin: 0 20px;
+            position: relative;
+            
+        
+        }
+       
+        header > ul a{
+            color: rgb(13, 13, 74);
+          font-size: 20px;
+           text-decoration: none;
+           text-transform: uppercase;
+           
+        }
+        .sous-menu {
+            display:none;
+            flex-direction: column;
+            position: absolute;
+            background-color: #eee;
+            text-align: center;
+             top: 20px; 
+             left: -20px; 
+             padding: 10px;
+        
+        }
+        .page2 li :hover{
+            color: rgb(105, 105, 130);
+        
+        }
+        .soso:hover .sous-menu {
+        display: block;
+        }
+        .per{
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            
+        }
+        .zwa9{
+            height: 300px;
+            display: flex;
+            width: 100%;
+    
+        }
+        .p1{
+            width: 75%;
+            height: 100%;
+            background-color: #18537a;
+            border-right: 6px #ffff00b4  solid;
+            padding:30px ;
+        }
+        .p1 h1{
+            font-size: 40px;
+            color: white;
+            margin-left: -710px;
+    
+        }
+        .p1 p{
+            color: white;
+            font-size: 20px;
+            margin: 20px;
+        }
+    
+        .p2{
+        
+            height: 100%;
+           
+        }
+        .p2 img{
+            height: 100%;
+        }
+        .tout{
+            min-height: 600px;
+        }
+        .select-box{
+            margin: 20px;
+            position :relative;
+            width: 43%;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,28%) ;
+        padding: 20px;
+        }
+        .select-box label{
+            
+            font-size: 25px;
+            text-transform: capitalize;
+        }
+        .select-box select{
+            height: 42px;
+            padding: 10px 15px ;
+            line-height: 18px;
+            font-size: 16px;
+            border: 1 solid  #18537a;
+            border-radius: 8px;
+        
+        } 
+        .page-goch , .page-droit{
+            width: 50%;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .page-goch > h2,.page-droit > h2{
+        font-size: 50px;
+        }
+        .inter{
+            height: 80px;
+           display: flex;
+        align-items: center;
+        
+        
+        }
+        details{
+            width: 60%;
+            margin: auto;
+            
+        }
+        summary{
+            border: #000 solid 2px;
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .inter img{
+            height: 70px;
+            width: 100px;
+        }
+        .sous-mem{
+            
+            width: 100%;
+            background-color: #eee;
+            border-radius: 20px;
+        
+            padding: 20px 10px 40px 40px;
+            text-align:left ;
+        
+        }
+        
+        
+        .page-goch h2 , .page-droit h2{
+            margin-bottom: 10px;
+        
+        }
+    
+        .page-final{
+            width: 100%;
+            height: 150px;
+            background-color: rgb(77, 77, 100);
+            display: flex;
+            flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        }
+        .page-final a{
+            text-decoration: none;
+            color: #000;
+        
+        }
+        #x7{
+            width: 500px;
+            height: 50px;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+    
+    </style>
+  <script src="../home-page/main.js"></script>
+</body>
+</html>
+
+

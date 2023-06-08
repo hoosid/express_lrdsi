@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h3><u>CRUD ON EXPRESS</u></h3>
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="sid">
+  add 
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>login</legend>
+                       
+                        <input type="text" name="nom" placeholder="nom">
+                        <input type="password" name="prenom" id="" placeholder="prenom">
+                        <input type="password" name="type2" id="" placeholder="type2">
+                        <input type="password" name="Specialite" id="" placeholder="Specialite">
+                        <input type="password" name="email" id="" placeholder="email">
+                        <button type="submit">submit</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- -------------------------------- -->
+    <table class="table table-striped">
+        <thead>
+          <tr>
+           
+            <th scope="col">id</th>
+            <th scope="col">type2</th>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">Specialite</th>
+            <th scope="col">email</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% crud.forEach((crud) => { %>
+              <tr>
+                <th scope="row"><%= crud.id_meb %></th>
+                <td><%= crud.type2 %></td>
+                <td><%= crud.nom %></td>
+                <td><%= crud.prenom %></td>
+                <td><%= crud.Spécialité %></td>
+                <td><%= crud.email %></td>
+                <td><button class="btn btn-primary"><a href="/edit/<%= crud.id %>">update</a></button></td>
+                <td><button class="btn btn-primary"><a href="/crud/<%= crud.id %>">delete</a></button></td>
+              </tr>
+            <% }); %>
+        </tbody>
+      </table>
+
+
+         <style>
+            table{
+                margin-top: 15%;
+            }
+            #sid{
+                float: right;
+                margin-top: 12%;
+            }
+            a{
+                text-decoration: none;
+                color: aliceblue;
+               
+            }
+            h3{
+                text-align: center;
+                
+            }
+         </style>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
